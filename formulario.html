@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📄Formulário de cadastro</title>
+    <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-teal-200 h-full flex flex-col gap-20 items-center py-20 px-80 max-2xl:gap-16 max-xl:gap-14 max-lg:gap-12 max-md:gap-11 max-sm:gap-10 max-2xl:py-16 max-xl:py-14 max-lg:py-12 max-md:py-11 max-sm:py-10 max-2xl:px-60 max-xl:px-52 max-lg:px-20 max-md:px-6 max-sm:px-4">
+
+    <!--Logo -->
+  <img class="w-96 bg-slate-100 rounded-3xl max-2xl:w-80 max-xl:w-72 max-lg:w-64 max-md:w-60 max-sm:w-56 max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl" src="https://i.ibb.co/nPn4mFJ/image-6.png" alt="">
+
+  <!-- Formulário de cadastro -->
+  <form action="/submit" method="post" enctype="multipart/form-data" class="bg-slate-50 p-10 rounded-3xl shadow-xl gap-10 flex flex-col w-full max-2xl:p-9 max-xl:p-8 max-lg:p-7 max-md:p-6 max-sm:p-5 max-2xl:gap-9 max-xl:gap-8 max-lg:gap-7 max-md:gap-6 max-sm:gap-5 max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl">
+
+    <!-- Titulo e subtitulo -->
+    <div class="space-y-6 max-2xl:space-y-5 max-xl:space-y-4 max-lg:space-y-3 max-md:space-y-2 max-sm:space-y-2">
+
+      <h1 class="text-4xl font-semibold text-gray-950 max-2xl:text-2xl max-xl:text-xl">Cadastro de Produtos</h1>
+      <h2 class="text-2xl text-gray-500 max-2xl:text-xl max-xl:text-lg max-lg:text-lg max-md:text-base max-sm:text-sm">Preencha o formulário para cadastrar um produto</h2>
+
+    </div>
+
+    <!--Container dos campos -->
+    <div class="space-y-10 max-2xl:space-y-9 max-xl:space-y-8 max-lg:space-y-7 max-md:space-y-6">
+
+      <!--Campo nome do produto -->
+      <div class="flex flex-col gap-6 max-2xl:gap-5 max-xl:gap-4 max-lg:gap-3 max-md:gap-2 max-sm:gap-2">
+      
+        <label for="txt-nome-produto" class="text-2xl font-semibold text-gray-800 max-2xl:text-xl max-xl:text-xl max-lg:text-lg max-md:text-lg max-sm:text-base">Nome</label>
+
+        <input type="text" name="nome-produto" id="txt-nome-produto" placeholder="Escreva o nome do produto" name="nome-produto" required maxlength="50" class="p-5 outline outline-2 rounded-3xl outline-teal-600 text-xl text-teal-700 hover:outline-teal-400 hover:outline-2 focus:outline-teal-500 focus:outline-4 font-medium max-2xl:p-4 max-xl:p-4 max-lg:p-3 max-md:p-3 max-sm:p-3 max-2xl:text-lg max-xl:text-lg max-lg:text-base max-md:text-sm max-sm:text-sm max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl">
+
+      </div>
+
+      <!--Campo nome do categoria -->
+      <div class="flex flex-col gap-6 relative group/categoria max-2xl:gap-5 max-xl:gap-4 max-lg:gap-3 max-md:gap-2 max-sm:gap-2">
+      
+        <label for="txt-categoria-produto" class="text-2xl font-semibold text-gray-800 max-2xl:text-xl max-xl:text-xl max-lg:text-lg max-md:text-lg max-sm:text-base">Categoria</label>
+
+        <svg class="w-9 absolute right-4 bottom-4 max-2xl:w-8 max-xl:w-7 max-lg:w-6 max-2xl:bottom-4 max-xl:bottom-4 max-lg:bottom-3 max-md:bottom-2 max-sm:bottom-1 fill-teal-600 group-hover/categoria:fill-teal-400 group-hover/categoria:scale-110" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" /></svg>
+
+
+        <select id="txt-categoria-produto" name="categoria-produto" required placeholder="Selecione uma categoria do produto" class="p-5 cursor-pointer outline outline-2 rounded-3xl outline-teal-600 text-xl text-teal-700 hover:outline-teal-400 hover:outline-2 focus:outline-teal-500 focus:outline-4 font-medium max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl max-2xl:p-4 max-xl:p-4 max-lg:p-3 max-md:p-3 max-sm:p-3 max-2xl:text-lg max-xl:text-lg max-lg:text-base max-md:text-sm max-sm:text-sm" style="appearance: none;"> 
+
+          <option value="eletronicos" class=" outline text-sm outline-2 rounded-3xl outline-gray-400  text-teal-500 hover:outline-teal-40 font-medium max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl">Legumes </option>
+
+          <option value="eletronicos" class="rounded-3xl hover:outline-teal-40 font-medium text-teal-500 text-sm max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl">Frutas </option>
+
+          <option value="eletronicos" class=" outline text-sm outline-2 rounded-3xl outline-gray-400  text-teal-500 hover:outline-teal-40 font-medium max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl">Verduras </option>
+
+          <option value="eletronicos" class="rounded-3xl hover:outline-teal-40 font-medium text-teal-500 text-sm max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl">Laticínios </option>
+
+        </select>
+
+      </div>
+
+      <!--Campo preco do produto -->
+      <div class="flex flex-col gap-6  max-2xl:gap-5 max-xl:gap-4 max-lg:gap-3 max-md:gap-2 max-sm:gap-2">
+
+      
+        <label for="txt-preco-produto" class="text-2xl font-semibold text-gray-800 max-2xl:text-xl max-xl:text-xl max-lg:text-lg max-md:text-lg max-sm:text-base">Preço</label>
+
+        <input type="number" min="0" name="txt-preco-produto" id="txt-preco-produto" placeholder="Escreva o preço do produto" name="preco-produto" required maxlength="10" class="p-5 outline outline-2 rounded-3xl outline-teal-600 text-xl text-teal-700 hover:outline-teal-400 hover:outline-2 focus:outline-teal-500 focus:outline-4 font-medium max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl max-2xl:p-4 max-xl:p-4 max-lg:p-3 max-md:p-3 max-sm:p-3 max-2xl:text-lg max-xl:text-lg max-lg:text-base max-md:text-sm max-sm:text-sm" >
+
+      </div>
+
+      <!--Campo custo do produto -->
+      <div class="flex flex-col gap-6  max-2xl:gap-5 max-xl:gap-4 max-lg:gap-3 max-md:gap-2 max-sm:gap-2">
+      
+        <label for="txt-custo-produto" class="text-2xl font-semibold text-gray-800 max-2xl:text-xl max-xl:text-xl max-lg:text-lg max-md:text-lg max-sm:text-base">Custo</label>
+
+        <input type="number" min="0" name="txt-custo-produto" id="txt-custo-produto" placeholder="Escreva o custo do produto" name="custo-produto" required maxlength="10" class="p-5 outline outline-2 rounded-3xl outline-teal-600 text-xl text-teal-700 hover:outline-teal-400 hover:outline-2 focus:outline-teal-500 focus:outline-4 font-medium max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl max-2xl:p-4 max-xl:p-4 max-lg:p-3 max-md:p-3 max-sm:p-3 max-2xl:text-lg max-xl:text-lg max-lg:text-base max-md:text-sm max-sm:text-sm" >
+
+      </div>
+
+      <!--Campo quantidade -->
+      <div class="flex flex-col gap-6 max-2xl:gap-5 max-xl:gap-4 max-lg:gap-3 max-md:gap-2 max-sm:gap-2">
+      
+        <label for="txt-quantidade-produto" class="text-2xl font-semibold text-gray-800 max-2xl:text-xl max-xl:text-xl max-lg:text-lg max-md:text-lg max-sm:text-base">Quantidade</label>
+
+        <input type="number" name="txt-quantidade-produto" id="txt-quantidade-produto" placeholder="Escreva a quantidade do produto" min="1" name="quantidade-produto" required maxlength="10" class="p-5 outline outline-2 rounded-3xl outline-teal-600 text-xl text-teal-700 hover:outline-teal-400 hover:outline-2 focus:outline-teal-500 focus:outline-4 font-medium max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl max-2xl:p-4 max-xl:p-4 max-lg:p-3 max-md:p-3 max-sm:p-3 max-2xl:text-lg max-xl:text-lg max-lg:text-base max-md:text-sm max-sm:text-sm" >
+
+      </div>
+
+      <!--Campo imagem -->
+      <div class="flex flex-col gap-6 max-2xl:gap-5 max-xl:gap-4 max-lg:gap-3 max-md:gap-2 max-sm:gap-2">
+      
+        <p class="text-2xl font-semibold text-gray-800 max-2xl:text-xl max-xl:text-xl max-lg:text-lg max-md:text-lg max-sm:text-base">Imagem</p>
+
+        <label  for="txt-imagem-produto" class=" font-semibold  h-80 outline outline-2 rounded-3xl outline-teal-600 text-xl text-teal-700 hover:outline-teal-400 hover:outline-2 focus:outline-teal-500 focus:outline-4 flex items-center justify-center cursor-pointer hover:text-teal-400 hover:font-bold max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl max-2xl:p-4 max-xl:p-4 max-lg:p-3 max-md:p-3 max-sm:p-3 max-2xl:text-lg max-xl:text-lg max-lg:text-base max-md:text-sm max-sm:text-sm max-2xl:h-72 max-xl:h-64 max-lg:h-60 max-md:h-56 max-sm:h-52"> <p id="lab-imagem-produto">Adicione uma imagem</p> <img class="h-full" id="imagem-preview" class="hidden"></label>
+
+        <input type="file" name="txt-imagem-produto" id="txt-imagem-produto" placeholder="Escreva a imagem do produto" min="1" name="imagem-produto" required maxlength="10" accept="image/*" class="hidden" >
+        
+        
+      </div>      
+
+    </div>
+
+          <!-- Botão -->
+      <button type="submit" class="bg-gradient-to-r from-teal-500 to-teal-400 w-full py-8 text-3xl font-semibold text-white rounded-2xl drop-shadow-xl my-6 mt-20 hover:scale-105 hover:rotate-1 hover:text-4xl hover:shadow-teal-300/40 hover:shadow-2xl hover:bg-gradient-to-r hover:from-teal-500/60 hover:to-teal-400/60 outline-teal-300 outline-2 max-2xl:rounded-2xl max-xl:rounded-2xl max-lg:rounded-xl max-2xl:text-2xl max-xl:text-xl max-lg:text-lg max-md:text-base max-2xl:py-7 max-xl:py-6 max-lg:py-5 max-2xl:my-5 max-xl:my-4 max-lg:my-3 max-2xl:mt-16 max-xl:mt-14 max-lg:mt-12 max-md:mt-10 max-sm:mt-9 max-2xl:hover:text-3xl max-xl:hover:text-2xl max-lg:hover:text-2xl max-md:hover:text-xl max-sm:hover:text-lg">Cadastrar</button>
+
+  </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
